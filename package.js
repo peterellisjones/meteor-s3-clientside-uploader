@@ -1,8 +1,8 @@
 Package.describe({
   name: 'peterellisjones:s3-clientside-uploader',
-  summary: ' /* Fill me in! */ ',
+  summary: 'Uploads things to S3 on the client using signed S3 policies created on the server',
   version: '1.0.0',
-  git: ' /* Fill me in! */ '
+  git: 'https://github.com/peterellisjones/meteor-s3-clientside-uploader.git'
 });
 
 Package.onUse(function(api) {
@@ -10,7 +10,7 @@ Package.onUse(function(api) {
   api.use('coffeescript');
   api.use('templating');
   api.use('blaze');
-  api.imply('peterellisjones:s3-policy-generator');
+  api.imply('peterellisjones:s3-policy-generator@1.0.0');
   api.addFiles('client/s3-clientside-upload-form.html', 'client');
   api.addFiles('client/s3-clientside-uploader.coffee', 'client');
   api.export('S3ClientsideUploader');
