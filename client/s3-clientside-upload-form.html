@@ -1,0 +1,7 @@
+<template name="s3ClientSideUploadForm">
+<form hidden id={{id}} class="s3-clientside-upload-form" action={{ awsBaseUrl }} enctype="multipart/form-data" content="text/html; charset=UTF-8" method="post" http-equiv="Content-Type">
+{{#each formFields }}<input  name="{{key}}" value="{{value}}">
+{{/each}}<input name="file">
+<input type="submit" value="Upload File to S3">
+</form>
+</template>
